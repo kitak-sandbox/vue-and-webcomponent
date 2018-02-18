@@ -1,0 +1,18 @@
+{
+  "name": "vue-and-webcomponent",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/kitak-sandbox/vue-and-webcomponent.git"
+  },
+  "author": "Keisuke KITA",
+  "license": "MIT",
+  "dependencies": {
+    "lit-html": "^0.9.0",
+    "vue": "^2.5.13"
+  }
+}

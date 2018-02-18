@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="module" async>
+        import Vue from '/node_modules/vue/dist/vue.esm.browser.js';
+        import '/my-button.js';
+        import '/home.js';
+
+        const initialize = () => {
+            (new Vue()).$mount('#app');
+        };
+        const data = document.querySelector('#app');
+        if (data) {
+            initialize();
+        } else {
+            document.addEventListener('DOMContentLoaded', initialize);
+        }
+    </script>
+</head>
+<body>
+    <div id="app">
+        <home></home>
+    </div>
+</body>
+</html>
