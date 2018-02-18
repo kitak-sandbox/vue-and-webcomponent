@@ -1,4 +1,4 @@
-import { html, render } from '/node_modules/lit-html/lib/lit-extended.js';
+import { html, render } from '/node_modules/lit-html/lit-html.js';
 
 const template = props => html`
   <style>
@@ -7,7 +7,7 @@ const template = props => html`
     }
   </style>
   <div>
-    <button on-click="${props.onClick}">${props.text}</button>
+    <button>${props.text}</button>
   </div>
 `;
 
@@ -18,6 +18,11 @@ export default class MyButton extends HTMLElement {
   constructor() {
     super();
     this._shadowRoot = this.attachShadow({mode: 'open'});
+    this._shadowRoot.addEventListener('click', (e) => {
+        if (e.target.tagName === 'BUTTON') {
+            this.onClick();
+        }
+    });
   }
   connectedCallback() {
     this.render();
